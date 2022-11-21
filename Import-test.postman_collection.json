@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "7b180198-f887-4836-b237-1f5c6d0d6167",
+		"name": "Import-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2994835"
+	},
+	"item": [
+		{
+			"name": "Load",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 555ad0OFiI42IfFfmBaJbh-6xuBdxPOCm-pCKvdQgMLgEdEU9pqAGjNH39CHwvaU-N9S-furUTrGfGynNVORjkHdn9H1-oy-C4KWEqQnLQeEeucCRDgBoi1c4iXWdu-NRKdsWvMLvTsTCfNwGVP1j8fRjedgC-ad0OFiI42IfFfmBaJbh-6xuBdxPOCm-pCKvdQgMLgEdEU9pqAGjNH39CHwvaU-N9S-furUTrGfGynNVORjkHdn9H1-oy-C4KWEqQnLQeEeucCRDgBoi1c4iXWdu-NRKdsWvMLvTsTCfNwGVP1j8fRjedgC",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/khems/OneDrive/Desktop/test.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/load",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seller data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/sellers/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"sellers",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seller contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/sellers/23/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"sellers",
+						"23",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seller sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/sellers/23/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"sellers",
+						"23",
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales Summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/sales/2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

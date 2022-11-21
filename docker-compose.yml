@@ -1,0 +1,29 @@
+services:
+  nginx:
+    build: images/nginx
+    command: nginx -g "daemon off;"
+    links:
+      - php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html/app
+      - ./.env:/var/www/html/app/
+  php:
+    build: images/php
+    volumes:
+      - ./src:/var/www/html/app
+    working_dir: /var/www/html/app/public
+    command: php-fpm
+    links:
+      - db
+      - cache
+    ports:
+      - "9000:9000"
+  db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password # needed as of mysql 8
+    ports:
+      - "3306:3306"
+  cache:
+    image: memcached:1.6-alpine
