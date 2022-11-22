@@ -1,20 +1,14 @@
-# stop:   
-#     docker-compose stop
-# shell:
-#     docker-compose exec app sh
+start:
+	docker-compose up --detach
 
-# start:
-#     docker-compose up --detach
+stop:
+	docker-compose stop
 
-# destroy:
-#     docker-compose down --volumes
+destroy:
+	docker-compose down --volumes
 
-# build:
-#     docker-compose up --detach --build
+shell:
+	docker-compose exec php sh
 
-# seed:
-#     docker-compose exec app php artisan db:seed
-
-# migrate:
-#     docker-compose exec app php artisan migrate:fresh
-start:  docker-compose up --detach
+migrate:
+	docker-compose exec php php artisan migrate

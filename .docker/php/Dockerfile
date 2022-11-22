@@ -1,4 +1,4 @@
-FROM php:8.1.9-fpm-alpine3.16
+FROM php:7.4-fpm-alpine
 
 RUN docker-php-ext-install mysqli pdo_mysql
 # memcached
